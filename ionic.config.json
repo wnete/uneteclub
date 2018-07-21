@@ -1,6 +1,6 @@
 {
   "name": "uneteclub",
-  "app_id": "",
+  "app_id": "f99f99d1",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
