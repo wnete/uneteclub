@@ -15,13 +15,14 @@ export class CardsPage {
       {
         user: {
           avatar: 'assets/img/marty-avatar.png',
-          name: 'Marty McFly'
+          name: 'Harolt 990'
         },
-        date: 'November 5, 1955',
+        date: 'Julio 15, 2018',
         image: 'assets/img/advance-card-bttf.png',
-        content: 'Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.',
+        content: 'Convencido de los beneficios de la tecnología para la sociedad. Me gusta la programación y las series de televisión.',
       },
-      {
+     /**
+      *  {
         user: {
           avatar: 'assets/img/sarah-avatar.png.jpeg',
           name: 'Sarah Connor'
@@ -39,6 +40,7 @@ export class CardsPage {
         image: 'assets/img/advance-card-jp.jpg',
         content: 'Your scientists were so preoccupied with whether or not they could, that they didn\'t stop to think if they should.'
       }
+      */
     ];
 
   }
