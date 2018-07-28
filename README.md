@@ -1,96 +1,81 @@
-# The Ionic Super Starter 🎮
+## Proyecto 
+<img src="http://wnete.com/wp-content/uploads/2018/07/uneteclub.jpg" />
 
-<img src="https://user-images.githubusercontent.com/236501/32385619-bddac0ac-c08c-11e7-9ee4-9c892197191f.png" width="400" />
+## https://uneteclub.com/
 
-The Ionic Super Starter is a batteries-included starter project for Ionic apps
-complete with pre-built pages, providers, and best practices for Ionic
-development.
+### Iniciativa en Desarrollo dentro del
+<img src="http://wnete.com/wp-content/uploads/2018/07/programa.jpg" />
 
-The goal of the Super Starter is to get you from zero to app store faster than
-before, with a set of opinions from the Ionic team around page layout,
-data/user management, and project structure.
+### Con el apoyo de
+<img src="http://wnete.com/wp-content/uploads/2018/07/alcaldia.jpg" />
+<img src="http://wnete.com/wp-content/uploads/2018/07/labitur.jpg" />
 
-The way to use this starter is to pick and choose the various page types you
-want use, and remove the ones you don't. If you want a blank slate, this
-starter isn't for you (use the `blank` type instead).
+### Proyecto en Desarrollo
+### Descripción y Contexto
+---
+Iniciativa propuesta dentro del marco del Proyecto Generación de Capacidades en el Ecosistema Digital en Bogotá
+atendiento uno de los retos identificados para la localidad de La Candelaria consistente en "Cómo podemos crear
+lazos mas estrechos entre la comunidad y sus visitantes incluida la población universitaria ?".
 
-One of the big advances in Ionic was moving from a rigid route-based navigation
-system to a flexible push/pop navigation system modeled off common native SDKs.
-We've embraced this pattern to provide a set of reusable pages that can be
-navigated to anywhere in the app. Take a look at the [Settings
-page](https://github.com/ionic-team/starters/blob/master/ionic-angular/official/super/src/pages/settings/settings.html)
-for a cool example of a page navigating to itself to provide a different UI
-without duplicating code.
+### Integrantes
+  Santiago Vargas //
+  Harolt Gómez //
+  Javier Mendoza
 
-## Table of Contents
+### Propuesta
+Desarrollo de Plataforma Móvil para promover nuevos canales de interacción entre la comunidad y los estudiantes
+universitarios, mediante el mecanismo de promoción de eventos y acumulación de puntos que se obtienen al visitar
+o participar de eventos y servicios en los comercios de La Candelaria.
 
-1. [Getting Started](#getting-started)
-2. [Pages](#pages)
-3. [Providers](#providers)
-4. [i18n](#i18n) (adding languages)
+### Planteamiento de Modelo de Negocio
+Desarrollo de un nuevo producto que haciendo uso de los beneficios de la tecnología proporcione a los turistas y
+visitantes de la localidad una experiencia novedosa, a la vez que promueve beneficios económicos para los grupos 
+sociales y productivos, y para la comunidad en general de La Candelaria. No se trata solamente de una plataforma 
+web y móvil, sino de la posibilidad de establecer nuevos canales de interacción de la comunidad con sus visitantes, 
+la poblacion universitaria y la población flotante de la localidad, utilizando una app como herramienta, pero 
+siendo las acciones humanas lo que realmente promueve y ejecuta el propósito del producto.
 
-## <a name="getting-started"></a>Getting Started
+El modelo de negocio de ésta iniciativa toma como base la propuesta presentada bajo el nombre WNETE desarrollada
+y validada durante el Laboratorio de Innovación Turistica de La Candelaria, Labitur (ver mas información en 
+medium.com https://bit.ly/2LXWB1G ), la cual fue elegida por la Alcaldía Local de La Candelaria como una de las 
+iniciativas ganadoras ( ver articulo en pagina de la alcaldia https://bit.ly/2mOkxJy ).
 
-To test this starter out, install the latest version of the Ionic CLI and run:
+## Documentación en Desarrollo.
 
-```bash
-ionic start mySuperApp super
-```
+### Documento de Análisis
+---
+Requerimientos Funcionales y No Funcionales, Análisis de Negocio. 
+ 	
+### Documento de Casos de Uso
+---
+Ver carpeta "Casos de Uso"
 
-## Pages
+#### Documento de Arquitectura y Diseño
+---
+Componentes de la Infraestructura, Componentes de la aplicación, Interfaz Grafica
 
-The Super Starter comes with a variety of ready-made pages. These pages help
-you assemble common building blocks for your app so you can focus on your
-unique features and branding.
+    App en desarrollo en Ionic 3 y Angular 5.
 
-The app loads with the `FirstRunPage` set to `TutorialPage` as the default. If
-the user has already gone through this page once, it will be skipped the next
-time they load the app.
+### Documento de Modelo de Datos
+---
+Estructura de Base de Datos, Diccionario de Datos, Modelo Relacional.
+Ver Carpeta "Base de Datos"
 
-If the tutorial is skipped but the user hasn't logged in yet, the Welcome page
-will be displayed which is a "splash" prompting the user to log in or create an
-account.
+### Código Fuente 
+---
+Ver archivo ZIP "uneteclub"
 
-Once the user is authenticated, the app will load with the `MainPage` which is
-set to be the `TabsPage` as the default.
+### Aplicación Compilada
+---
+En desarrollo
 
-The entry and main pages can be configured easily by updating the corresponding
-variables in
-[src/pages/index.ts](https://github.com/ionic-team/starters/blob/master/ionic-angular/official/super/src/pages/index.ts).
+### Más Información y links relacionados
+---
+Información relacionada con el proyecto en los siguientes links
 
-Please read the
-[Pages](https://github.com/ionic-team/starters/tree/master/ionic-angular/official/super/src/pages)
-readme, and the readme for each page in the source for more documentation on
-each.
+https://wnete.com
+https://uneteclub.com
+https://github.com/TalentoBogotaFedesoft/UNL005-6App
 
-## Providers
-
-The Super Starter comes with some basic implementations of common providers.
-
-### User
-
-The `User` provider is used to authenticate users through its
-`login(accountInfo)` and `signup(accountInfo)` methods, which perform `POST`
-requests to an API endpoint that you will need to configure.
-
-### Api
-
-The `Api` provider is a simple CRUD frontend to an API. Simply put the root of
-your API url in the Api class and call get/post/put/patch/delete 
-
-## i18n
-
-Ionic Super Starter comes with internationalization (i18n) out of the box with
-[ngx-translate](https://github.com/ngx-translate/core). This makes it easy to
-change the text used in the app by modifying only one file. 
-
-### Adding Languages
-
-To add new languages, add new files to the `src/assets/i18n` directory,
-following the pattern of LANGCODE.json where LANGCODE is the language/locale
-code (ex: en/gb/de/es/etc.).
-
-### Changing the Language
-
-To change the language of the app, edit `src/app/app.component.ts` and modify
-`translate.use('en')` to use the LANGCODE from `src/assets/i18n/`
+correo:
+admin@wnete.com
