@@ -20,6 +20,20 @@ import { EscaneaPage } from '../pages/escanea/escanea';
 import { PromocionaPage } from '../pages/promociona/promociona';
 
 
+
+import { Http } from '@angular/http';
+
+import { 
+  WpApiModule,
+  WpApiLoader,
+  WpApiStaticLoader
+} from 'wp-api-angular'
+
+export function WpApiLoaderFactory(http: Http) {
+  return new WpApiStaticLoader(http, 'http://wnete.com/wp-json/');
+}
+
+
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
 export function createTranslateLoader(http: HttpClient) {
@@ -47,6 +61,7 @@ export function provideSettings(storage: Storage) {
     EncuentraPage,
     EscaneaPage,
     PromocionaPage
+	  
   ],
   imports: [
     BrowserModule,
@@ -60,7 +75,12 @@ export function provideSettings(storage: Storage) {
       }
     }),
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+	WpApiModule.forRoot({
+      provide: WpApiLoader,
+      useFactory: (WpApiLoaderFactory),
+      deps: [Http]
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -68,6 +88,7 @@ export function provideSettings(storage: Storage) {
     EncuentraPage,
     EscaneaPage,
     PromocionaPage
+	  
   ],
   providers: [
     Api,

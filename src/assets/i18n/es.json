@@ -10,9 +10,13 @@
   "TAB3_TITLE": "Ajustes",
 
   "MAP_TITLE": "Mapa",
+  
+  "TUTORIAL_SKIP_BUTTON": "Ingresar",
+  "TUTORIAL_CONTINUE_BUTTON": "Continuar",
+  "TUTORIAL_SLIDE4_TITLE": "Comenzamos ?",
 
   "TUTORIAL_SLIDE1_TITLE": "Bienvenid@ a Únete Club",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "En <b>Únete Club</b> puedes acumular puntos mientras interactúas con tu comunidad.",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "En <b>Únete Club</b> acumulas puntos mientras interactúas con tu comunidad.",
 
   "TUTORIAL_SLIDE2_TITLE": "Cómo funciona ?",
   "TUTORIAL_SLIDE2_DESCRIPTION": "Participa en Eventos, Visita Lugares, Comparte con tu Comunidad, Descubre lo que ofrece tu Localidad, Conoce tu Ciudad, en fin...hay múltiples formas de participar !!!.",
@@ -29,6 +33,7 @@
   "SETTINGS_PAGE_PROFILE": "Editar Perfil",
 
   "WELCOME_TITLE": "Bienvenido/a",
+  "WELCOME_INTRO": "Descubre tu Ciudad, Vive el Mundo Real",
 
   "LOGIN_TITLE": "Iniciar sesión",
   "LOGIN_ERROR": "No se ha podido iniciar sesión. Por favor revisa la información de la cuenta e inténtalo de nuevo.",

@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-buttons start>
+      <button ion-button icon-only menuToggle><ion-icon name="menu"></ion-icon></button>
+    </ion-buttons>
+    <ion-title>Guía de Usuario</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+<button ion-button full (click)="goBack()">-<<-Regresa</button>
+  <ion-row no-padding class="search-row" align-items-center>
+    <ion-col col-9>
+      <ion-input type="text" [(ngModel)]="searchTerm" placeholder="Search for..." class="search-input"></ion-input>
+    </ion-col>
+    <ion-col col-3>
+      <button ion-button full clear small (click)="startSearch()">Search</button>
+    </ion-col>
+  </ion-row>
+<ion-list>
+  <ion-card *ngFor="let post of posts" (click)="openPost(post)" tappable>
+    <img [src]="post.media_url | async">
+    <ion-card-content>
+      <ion-card-title>
+        {{ post.title.rendered }}
+      </ion-card-title>
+      <div [innerHTML]="post.excerpt.rendered"></div>
+    </ion-card-content>
+  </ion-card>
+</ion-list>
+<button ion-button full clear (click)="loadMore()" *ngIf="posts.length >= 10">Load more...</button>
+</ion-content>

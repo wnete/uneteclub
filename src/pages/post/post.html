@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{ post.title.rendered }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <img [src]="post.media_url | async">    
+<h2 padding>{{ post.title.rendered }}</h2>
+<ion-card *ngIf="author">
+  <ion-item text-wrap>
+    <ion-avatar item-start>
+      <img [src]="author.avatar_urls['96']">
+    </ion-avatar>
+    <h2>{{ author.name }}</h2>
+    <p>{{ author.description }}</p>
+  </ion-item>
+</ion-card>
+<div [innerHTML]="post.content.rendered" padding></div>
+
+
+</ion-content>

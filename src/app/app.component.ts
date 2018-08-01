@@ -11,7 +11,7 @@ import { Settings } from '../providers';
   template: `<ion-menu [content]="content">
     <ion-header>
       <ion-toolbar>
-        <ion-title>Pages</ion-title>
+        <ion-title>Descubre Más</ion-title>
       </ion-toolbar>
     </ion-header>
 
@@ -34,15 +34,15 @@ export class MyApp {
   pages: any[] = [
     { title: 'Tutorial', component: 'TutorialPage' },
     { title: 'Bienvenida', component: 'WelcomePage' },
-    { title: 'Tabs', component: 'TabsPage' },
+    { title: 'Tabs', component: 'TabsPage'},
     { title: 'Perfil', component: 'CardsPage' },
-    /**{ title: 'Content', component: 'ContentPage' },
-     * */
-    { title: 'Login', component: 'LoginPage' },
-    { title: 'Signup', component: 'SignupPage' },
-    /**{ title: 'Master Detail', component: 'ListMasterPage' },
-    { title: 'Menu', component: 'MenuPage' },
+    { title: 'Guía de Usuario', component: 'HomePage' }
     
+    /**{ title: 'Login', component: 'LoginPage' },
+    { title: 'Signup', component: 'SignupPage' },
+    { title: 'Master Detail', component: 'ListMasterPage' },
+    { title: 'Menu', component: 'MenuPage' },
+    { title: 'Content', component: 'ContentPage' },
     { title: 'Settings', component: 'SettingsPage' },
     { title: 'Search', component: 'SearchPage' },
     { title: 'Encuentra', component: 'EncuentraPage' },
@@ -63,7 +63,7 @@ export class MyApp {
 
   initTranslate() {
     // Set the default language for translation strings, and the current language.
-    this.translate.setDefaultLang('en');
+    this.translate.setDefaultLang('es');
     const browserLang = this.translate.getBrowserLang();
 
     if (browserLang) {
@@ -79,7 +79,7 @@ export class MyApp {
         this.translate.use(this.translate.getBrowserLang());
       }
     } else {
-      this.translate.use('en'); // Set your language here
+      this.translate.use('es'); // Set your language here
     }
 
     this.translate.get(['BACK_BUTTON_TEXT']).subscribe(values => {

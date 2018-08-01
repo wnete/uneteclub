@@ -6,12 +6,18 @@
 -->
 <ion-header>
   <ion-navbar color="primary">
+  <ion-buttons start>
+      <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    </ion-buttons>
     <ion-title>Encuentra</ion-title>
   </ion-navbar>
 </ion-header>
  
 <ion-content padding>
   <button ion-button full (click)="openCards()">Mi Perfil</button>
+  <button ion-button full (click)="openMenu()">Opciones</button>
   <button ion-button full (click)="goToPromociona()">Promociona</button>
   <ion-list>
     <ion-item *ngFor="let user of users">

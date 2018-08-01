@@ -1,40 +1,67 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, Nav, NavController } from 'ionic-angular';
-
-interface PageItem {
-  title: string
-  component: any
+import { IonicPage, NavController, Nav } from 'ionic-angular';
+ 
+export interface PageInterface {
+  title: string;
+  pageName: string;
+  tabComponent?: any;
+  index?: number;
+  icon: string;
 }
-type PageList = PageItem[]
-
+ 
 @IonicPage()
 @Component({
   selector: 'page-menu',
-  templateUrl: 'menu.html'
+  templateUrl: 'menu.html',
 })
 export class MenuPage {
-  // A reference to the ion-nav in our component
+  // Basic root for our content view
+  rootPage = 'TabsPage';
+ 
+  // Reference to the app's root nav
   @ViewChild(Nav) nav: Nav;
-
-  rootPage: any = 'ContentPage';
-
-  pages: PageList;
-
-  constructor(public navCtrl: NavController) {
-    // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Sign in', component: 'LoginPage' },
-      { title: 'Signup', component: 'SignupPage' }
-    ];
+ 
+  pages: PageInterface[] = [
+    
+    { title: 'Content', pageName: 'ContentPage', icon: 'shuffle' },
+  ];
+ 
+  constructor(public navCtrl: NavController) { }
+ 
+  openPage(page: PageInterface) {
+    let params = {};
+ 
+    // The index is equal to the order of our tabs inside tabs.ts
+    if (page.index) {
+      params = { tabIndex: page.index };
+    }
+ 
+    // The active child nav is our Tabs Navigation
+    if (this.nav.getActiveChildNav() && page.index != undefined) {
+      this.nav.getActiveChildNav().select(page.index);
+    } else {
+      // Tabs are not active, so reset the root page 
+      // In this case: moving to or from SpecialPage
+      this.nav.setRoot(page.pageName, params);
+    }
   }
-
-  ionViewDidLoad() {
-    console.log('Hello MenuPage Page');
+ 
+  isActive(page: PageInterface) {
+    // Again the Tabs Navigation
+    let childNav = this.nav.getActiveChildNav();
+ 
+    if (childNav) {
+      if (childNav.getSelected() && childNav.getSelected().root === page.tabComponent) {
+        return 'primary';
+      }
+      return;
+    }
+ 
+    // Fallback needed when there is no active childnav (tabs not active)
+    if (this.nav.getActive() && this.nav.getActive().name === page.pageName) {
+      return 'primary';
+    }
+    return;
   }
-
-  openPage(page: PageItem) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
-  }
+ 
 }

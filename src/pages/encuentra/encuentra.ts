@@ -23,6 +23,10 @@ export class EncuentraPage {
   openCards() {
     this.navCtrl.push('CardsPage');
   }
+  
+  openMenu() {
+    this.navCtrl.setRoot('MenuPage');
+  }
  
   goToPromociona() {
     this.navCtrl.parent.select(2);
